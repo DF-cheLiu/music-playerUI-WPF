@@ -1,0 +1,274 @@
+﻿<Window x:Class="musicPlayerUI.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        WindowStyle="None"
+        Height="720" Width="1080"
+        Background="Transparent"
+        AllowsTransparency="True" WindowStartupLocation="CenterScreen">
+
+    
+    <Border Background="#f7f9fc" CornerRadius="20"
+            MouseDown="Border_MouseDown"  MouseLeftButtonDown="Border_MouseLeftButtonDown" >
+
+        <Grid>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="230" />
+                <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
+            <Border Background="#f0f3f6" CornerRadius="20 0 0 20"/>
+
+
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="auto"/>
+                    <RowDefinition Height="auto"/>
+                    <RowDefinition Height="auto"/>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                </Grid.RowDefinitions>
+
+                <TextBlock Width="40" Height="40" Foreground="Red"
+                           Margin="20 20 0 0"
+                           Text="&#xe60c;" HorizontalAlignment="Left"
+                           FontFamily="pack://application:,,,/Fonts/#iconfont" 
+                           FontSize="35"/>
+
+                <TextBlock Foreground="#283248" Text="cheL音乐" 
+                             FontFamily="pack://application:,,,/Fonts/#得意黑" 
+             FontSize="15" Margin="60,28,110,8"/>
+
+                <Border  HorizontalAlignment="Right" Margin="0 17 80 0" BorderThickness="1" BorderBrush="Gray"
+                        Width="25" Height="15" CornerRadius="3">
+                    <TextBlock Foreground="Gray" Text="Beta" FontSize="10" />
+                </Border>
+                <StackPanel Grid.Row="2">
+                    <Button 
+                            Style="{StaticResource BottemBtn_01}" />
+                    <Button 
+                            Style="{StaticResource BottemBtn_02}" />
+                    <Button 
+                            Style="{StaticResource BottemBtn_03}" />
+                    <Button 
+                            Style="{StaticResource BottemBtn_04}" />
+                    <Button  
+                            Style="{StaticResource BottemBtn_05}" />
+                    <Button 
+                            Style="{StaticResource BottemBtn_06}" />
+                    <Button 
+        Style="{StaticResource BottemBtn_07}" />
+                </StackPanel>
+
+                <StackPanel Grid.Row="1" >
+                    <Button 
+               Style="{StaticResource LeftButton_01}" />
+                    <Button  Style="{StaticResource LeftButton_02}" />
+                    <Button  Style="{StaticResource LeftButton_03}" />
+                    <Button  Style="{StaticResource LeftButton_04}" />
+                    <Button  Style="{StaticResource LeftButton_05}" />
+
+                    <Separator Grid.Column="2" Margin="20" Background="Gray"
+                   Height="0.7"/>
+                </StackPanel>
+
+            </Grid>
+            <Border Grid.Column="1" CornerRadius="0 20 20 0">
+                <Border.Background >
+                    <LinearGradientBrush StartPoint="0,0" EndPoint="1,1">
+                        <GradientStop Color="#d4ebb1" Offset="0"/>
+                        <GradientStop Color="#94dac1" Offset="1"/>
+                    </LinearGradientBrush>
+                </Border.Background>
+                <Grid Grid.Column="1">
+
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="auto"/>
+                        <RowDefinition Height="auto"/>
+                        <RowDefinition Height="auto"/>
+                        <RowDefinition Height="auto"/>
+                        <RowDefinition Height="auto"/>
+                        <RowDefinition Height="auto"/>
+                    </Grid.RowDefinitions>
+
+                    <Button  Style="{StaticResource topButton}"/>
+                    <TextBox  Style="{StaticResource toptextBox}"/>
+                    <Button  Style="{StaticResource topButton_02}"/>
+
+
+                    <Button HorizontalAlignment="Right" Background="Transparent"
+                            Width="30" Height="30" Foreground="#737d8d"
+                            Margin="0 0 20 0" FontSize="20" BorderThickness="0" Content="&#xe638;" FontFamily="pack://application:,,,/Fonts/#iconfont" Click="Button_Click"/>
+
+
+                    <Button HorizontalAlignment="Right" Background="Transparent"
+                            Width="30" Height="30" Foreground="#737d8d"
+                            Margin="0 0 55 0" FontSize="20" BorderThickness="0" Content="&#xe63d;" FontFamily="pack://application:,,,/Fonts/#iconfont"/>
+
+                    <Button HorizontalAlignment="Right" Background="Transparent"
+            Width="30" Height="30" 
+            Margin="0 0 90 0" Foreground="#737d8d" FontSize="20" BorderThickness="0" Content="&#xe627;" FontFamily="pack://application:,,,/Fonts/#iconfont"/>
+
+                    <Separator  BorderThickness="10" 
+                                Width="15" Margin="0 0 125 0" BorderBrush="#adb1b6" HorizontalAlignment="Right">
+                        <Separator.LayoutTransform>
+                            <RotateTransform Angle="90"/>
+                        </Separator.LayoutTransform>
+                    </Separator>
+
+                    <Button HorizontalAlignment="Right" Background="Transparent"
+            Width="30" Height="30" Foreground="#737d8d"
+            Margin="0 0 130 0" FontSize="20" BorderThickness="0" Content="&#xe691;" FontFamily="pack://application:,,,/Fonts/#iconfont"/>
+
+
+                    <Button HorizontalAlignment="Right" Background="Transparent"
+            Width="30" Height="30" Foreground="#737d8d"
+            Margin="0 0 160 0" FontSize="20" BorderThickness="0" Content="&#xe60d;" FontFamily="pack://application:,,,/Fonts/#iconfont"/>
+
+
+                    <Button HorizontalAlignment="Right"  Background="Transparent"
+            Width="30" Height="30" Foreground="#737d8d"
+            Margin="0 0 190 0" FontSize="20" BorderThickness="0" Content="&#xe908;" FontFamily="pack://application:,,,/Fonts/#iconfont"/>
+
+                    <Button HorizontalAlignment="Right" Background="Transparent"
+        Width="30" Height="30" Foreground="#737d8d"
+        Margin="0 0 220 0" FontSize="20" BorderThickness="0" Content="&#xe621;" FontFamily="pack://application:,,,/Fonts/#iconfont"/>
+
+
+
+                    <Grid Grid.Row="1" >
+                        <Border Style="{StaticResource imgborder}"  >
+                            <Border.Background>
+                                <ImageBrush ImageSource="pack://application:,,,/images/cywl.jpg"/>
+                            </Border.Background>
+                        </Border>
+
+                        <Button Content="播放全部" Style="{StaticResource center_btn}"/>
+
+                        <Button   Content="下载" Style="{StaticResource center_btn_02}"/>
+                        <Button  Content="..." Style="{StaticResource center_btn_03}"/>
+
+                    </Grid>
+                    <Grid Grid.Row="2">
+                        <Button Style="{StaticResource textBtn_01}"  Content="歌曲" />
+                        <Button Style="{StaticResource textBtn_02}"  Content="评论" />
+                        <Button Content="收藏者" Style="{StaticResource textBtn_03}"/>
+                        <Button Content="搜索" Style="{StaticResource textBtn_04}"/>
+
+                        <Grid  Grid.Row="3">
+
+                            <TextBlock Text="#" Width="30" HorizontalAlignment="Left" Margin="10 0 0 0"
+                                     Background="Transparent"  FontSize="20" Foreground="#707070"/>
+
+                            <Button Width="300" Height="30" Background="Transparent"
+                                    HorizontalAlignment="Left" Margin="40 0 0 0"
+                                    BorderThickness="0" Content="评论" Foreground="#707070"
+                                    FontSize="15" />
+
+                            <Button Width="200" Height="30" Background="Transparent"
+                                    HorizontalAlignment="Left" Margin="340 0 0 0"
+                                    BorderThickness="0" Content="专辑" Foreground="#707070"
+                                    FontSize="15"  />
+
+                            <TextBlock Width="100" Height="30" Background="Transparent"
+        HorizontalAlignment="Right" Margin="0 0 120 0"
+        Text="喜欢" Foreground="#707070" FontSize="15" />
+
+                            <Button Width="100" Height="30" Background="Transparent"
+                                HorizontalAlignment="Right" Margin="0 0 20 0"
+                                BorderThickness="0" Content="时长" Foreground="#707070"
+                                FontSize="15"  />
+
+
+                            <Separator Height="0.8" BorderThickness="5" BorderBrush="DarkGray"
+                                       Margin="0 35 0 0" />
+                        </Grid>
+
+                    </Grid>
+
+                    <StackPanel Grid.Row="4">
+                        <Button Height="50" Style="{StaticResource music_01}"/>
+                        <Button Height="50" Style="{StaticResource music_02}"/>
+                        <Button Height="50" Style="{StaticResource music_03}"/>
+                        <Button Height="50" Style="{StaticResource music_04}"/>
+                    </StackPanel>
+
+
+
+                    <Border VerticalAlignment="Bottom" Grid.Row="5" 
+                    Height="64" Background="#eaf0fa" 
+                    CornerRadius="0 0 20 0">
+                    </Border>
+
+                    <Button Content="&#xe60a;" FontFamily="pack://application:,,,/Fonts/#iconfont"
+                            Grid.Row="5"  Foreground="#9bdcbf" FontWeight="Bold"
+                            FontSize="45" Width="50" Height="50" Background="Transparent"
+                            Margin="15 0 0 0" HorizontalAlignment="Left" BorderThickness="0"/>
+
+                    <Button Content="&#xe602;" FontFamily="pack://application:,,,/Fonts/#iconfont"
+         Grid.Row="5"  Foreground="#fc3d4b" 
+         FontSize="20" Width="25" Height="25" Background="Transparent"
+         Margin="80 0 0 0" VerticalAlignment="Bottom" HorizontalAlignment="Left" BorderThickness="0"/>
+
+                    <Button Content="&#xe891;" FontFamily="pack://application:,,,/Fonts/#iconfont"
+Grid.Row="5"  Foreground="#7c828f" 
+FontSize="20" Width="25" Height="25" Background="Transparent"
+Margin="120 0 0 0" VerticalAlignment="Bottom" HorizontalAlignment="Left" BorderThickness="0"/>
+
+
+                    <Button Content="&#xe64c;" FontFamily="pack://application:,,,/Fonts/#iconfont"
+Grid.Row="5"  Foreground="#7c828f" 
+FontSize="20" Width="25" Height="25" Background="Transparent"
+Margin="155 0 0 0" VerticalAlignment="Bottom" HorizontalAlignment="Left" BorderThickness="0"/>
+
+                    <Button Content="&#xe856;" FontFamily="pack://application:,,,/Fonts/#iconfont"
+Grid.Row="5"  Foreground="#7c828f" 
+FontSize="20" Width="25" Height="25" Background="Transparent"
+Margin="190 0 0 0" VerticalAlignment="Bottom" HorizontalAlignment="Left" BorderThickness="0"/>
+
+                    <Button Content="&#xe624;" FontFamily="pack://application:,,,/Fonts/#iconfont"
+Grid.Row="5"  Foreground="#fc3d49" 
+FontSize="50" Width="60" Height="60" Background="Transparent"
+ VerticalAlignment="Top" HorizontalAlignment="Center" BorderThickness="0"/>
+
+                    <Button Content="&#xe607;" FontFamily="pack://application:,,,/Fonts/#iconfont"
+Grid.Row="5"  Foreground="#525a6c" Margin="0 0 130 0"
+FontSize="35" Width="60" Height="60" Background="Transparent"
+ VerticalAlignment="Top" HorizontalAlignment="Center" BorderThickness="0"/>
+                    
+                    <Button Content="&#xe606;" FontFamily="pack://application:,,,/Fonts/#iconfont"
+Grid.Row="5"  Foreground="#525a6c" Margin="130 0 0 0"
+FontSize="35" Width="60" Height="60" Background="Transparent"
+ VerticalAlignment="Top" HorizontalAlignment="Center" BorderThickness="0"/>
+
+                    <Button Content="词" Grid.Row="5"  Foreground="#525a6c" Margin="250 0 0 0"
+FontSize="30" Width="60" Height="60" Background="Transparent" FontWeight="Heavy" 
+ VerticalAlignment="Top" HorizontalAlignment="Center" BorderThickness="0"/>
+
+                    <Button Content="&#xe86a;" FontFamily="pack://application:,,,/Fonts/#iconfont"
+Grid.Row="5"  Foreground="#7c828f" 
+FontSize="20" Width="25" Height="25" Background="Transparent"
+Margin="0 0 120 0" VerticalAlignment="Center" HorizontalAlignment="Right" BorderThickness="0"/>
+
+                    <Button Content="&#xeae4;" FontFamily="pack://application:,,,/Fonts/#iconfont"
+Grid.Row="5"  Foreground="#7c828f" 
+FontSize="20" Width="25" Height="25" Background="Transparent"
+Margin="0 0 85 0" VerticalAlignment="Center" HorizontalAlignment="Right" BorderThickness="0"/>
+
+                    <TextBlock Grid.Row="5"  Foreground="#7c828f" Text="By-CheLiu"
+                               
+FontSize="10" Width="50" Height="25" Background="Transparent"
+Margin="0 0 15 0" VerticalAlignment="Bottom" HorizontalAlignment="Right" />
+
+                </Grid>
+            </Border>
+
+
+
+
+
+
+        </Grid>
+
+    </Border>
+
+ 
+</Window>
